@@ -1,0 +1,18 @@
+{
+  "name": "marp-template",
+  "scripts": {
+    "preview": "marp -s ./src",
+    "build:pptx": "marp --pptx --theme-set ./src/themes/*.css --allow-local-files",
+    "build:pdf": "marp --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.0.0",
+    "@marp-team/marp-core": "^4.0.0",
+    "prettier": "^3.3.3"
+  },
+  "marp": {
+    "inputDir": "./src",
+    "output": "./sample",
+    "themeSet": "./src/themes"
+  }
+}
