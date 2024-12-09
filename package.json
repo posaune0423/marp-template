@@ -14,5 +14,9 @@
     "inputDir": "./src",
     "output": "./sample",
     "themeSet": "./src/themes"
+  },
+  "devDependencies": {
+    "highlight.js": "^11.10.0",
+    "highlightjs-solidity": "^2.0.6"
   }
 }

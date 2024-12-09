@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- [Bun](https://bun.sh) v1.1.7 or later
+- [Node.js](https://nodejs.org) v23.3.0 or later
 - A text editor with Markdown support
 
 ## Installation
@@ -13,20 +13,20 @@ cd marp-template
 ```
 
 ```bash
-bun install
+npm install
 ```
 
 ## Preview current slides
 
 ```bash
-bun run preview
+npm run preview
 ```
 
 ## Build slides and generate pptx and pdf
 
 ```bash
-bun run build:pptx
-bun run build:pdf
+npm run build:pptx
+npm run build:pdf
 ```
 
 ## Customize
