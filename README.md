@@ -8,7 +8,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/your-repo/marp-template.git
+git clone https://github.com/posaune0423/marp-template.git
 cd marp-template
 ```
 
