@@ -97,3 +97,114 @@ p.profile {
   bottom: 10px;
   color: var(--color-primary);
 }
+
+/* Ayu Mirage */
+/* @import does not work in Marp @see https://github.com/orgs/marp-team/discussions/103 */
+
+/* ayu mirage highlight.js theme
+ * Based on ayu mirage by dempfi
+ * Modified for Marp compatibility
+ */
+
+:root {
+  --ayu-bg: #262d35;
+  --ayu-fg: #cbccc6;
+  --ayu-comment: #5c6773;
+  --ayu-keyword: #ffa759;
+  --ayu-markup: #f28779;
+  --ayu-constant: #d4bfff;
+  --ayu-string: #bae67e;
+  --ayu-entity: #73d0ff;
+  --ayu-tag: #5ccfe6;
+  --ayu-func: #ffd580;
+  --ayu-error: #ff3333;
+}
+
+pre {
+  color: var(--ayu-fg) !important;
+  background: rgba(38, 45, 53, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* コメント系 */
+pre .hljs-comment,
+pre .hljs-quote {
+  color: var(--ayu-comment) !important;
+  font-style: italic;
+}
+
+/* キーワード、ドクタグ、数式など */
+pre .hljs-doctag,
+pre .hljs-keyword,
+pre .hljs-formula {
+  color: var(--ayu-keyword) !important;
+}
+
+/* セクション、名前、タグ、削除行、substなど */
+pre .hljs-section,
+pre .hljs-name,
+pre .hljs-selector-tag,
+pre .hljs-deletion,
+pre .hljs-subst {
+  color: var(--ayu-markup) !important;
+}
+
+/* リテラル */
+pre .hljs-literal {
+  color: var(--ayu-constant) !important;
+}
+
+/* 文字列、正規表現、追加、属性など */
+pre .hljs-string,
+pre .hljs-regexp,
+pre .hljs-addition,
+pre .hljs-attribute,
+pre .hljs-meta .hljs-string {
+  color: var(--ayu-string) !important;
+}
+
+/* 型、変数、クラス選択子、疑似クラス、番号など */
+pre .hljs-attr,
+pre .hljs-variable,
+pre .hljs-template-variable,
+pre .hljs-type,
+pre .hljs-selector-class,
+pre .hljs-selector-attr,
+pre .hljs-selector-pseudo,
+pre .hljs-number {
+  color: var(--ayu-entity) !important;
+}
+
+/* シンボル、箇条書き、リンク、メタ、ID選択子、タイトルなど */
+pre .hljs-symbol,
+pre .hljs-bullet,
+pre .hljs-link,
+pre .hljs-meta,
+pre .hljs-selector-id,
+pre .hljs-title {
+  color: var(--ayu-tag) !important;
+}
+
+/* 組み込み、クラス、関数名など */
+pre .hljs-built_in,
+pre .hljs-title.class_,
+pre .hljs-class .hljs-title,
+pre .hljs-function {
+  color: var(--ayu-func) !important;
+}
+
+/* 強調・強調表示 */
+pre .hljs-emphasis {
+  font-style: italic;
+}
+
+pre .hljs-strong {
+  font-weight: bold;
+}
+
+/* エラー */
+pre .hljs-error {
+  color: var(--ayu-bg) !important;
+  background: var(--ayu-error) !important;
+}

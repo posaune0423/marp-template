@@ -1,20 +1,20 @@
 /* @theme eth */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'default';
 
 /* Text Size and Color Guide */
 :root {
   font-family: 'Inter', sans-serif;
 
-  --font-size-title: 32px; /* 最大サイズ */
-  --font-size-heading: 20px; /* 見出しサイズ */
-  --font-size-body: 16px; /* 本文テキスト */
-  --font-size-subtext: 16px; /* 本文サブテキスト */
-  --font-size-caption: 12px; /* キャプション */
+  --font-size-title: 32px;
+  --font-size-heading: 28px;
+  --font-size-subheading: 20px;
+  --font-size-body: 14px;
+  --font-size-small: 12px;
 
-  --color-primary: #9357F4;
-  --color-link: #CDB0FD;
+  --color-primary: #9357f4;
+  --color-link: #cdb0fd;
   --color-text-title: #fff;
   background: url('./themes/assets/eth/bg.webp') no-repeat center center fixed;
   background-size: cover;
@@ -23,6 +23,8 @@
 
 header {
   color: var(--color-text-title);
+  top: 10px;
+  left: 70px;
 }
 
 footer {
@@ -32,39 +34,41 @@ footer {
 /* Custom Style */
 /* Heading Colors */
 h1 {
-  color: var(--color-text-title); /* メインテキストカラー */
+  color: var(--color-text-title);
   font-size: var(--font-size-title);
   font-weight: 900;
 }
 
 h2 {
-  color: var(--color-primary); /* メインテキストカラー */
-  font-size: var(--font-size-title);
+  color: var(--color-primary);
+  font-size: var(--font-size-heading);
   font-weight: 700;
   position: absolute;
-  top: 100px;
+  top: 50px;
+  margin-bottom: 2em;
 }
 
 h3 {
-  color: var(--color-text-title); /* メインテキストカラー */
-  font-size: var(--font-size-title);
+  color: var(--color-text-title);
+  font-size: var(--font-size-subheading);
   font-weight: 700;
+  margin-top: 1em;
 }
 
 h4 {
-  color: var(--color-text-title); /* 補足用テキストカラー */
-  font-size: var(--font-size-heading);
+  color: var(--color-text-title);
+  font-size: var(--font-size-body);
   font-weight: 700;
 }
 
 h5 {
-  color: var(--color-text-title); /* 追加のカラー */
-  font-size: var(--font-size-subtext);
+  color: var(--color-text-title);
+  font-size: var(--font-size-small);
 }
 
 h6 {
-  color: var(--color-text-title); /* 追加のカラー */
-  font-size: var(--font-size-caption);
+  color: var(--color-text-title);
+  font-size: var(--font-size-small);
 }
 
 p,
@@ -74,7 +78,8 @@ ol,
 div {
   color: var(--color-text-title);
   font-weight: light;
-  line-height: 2;
+  line-height: 1.6;
+  font-size: var(--font-size-body);
 }
 
 a {
@@ -96,4 +101,120 @@ p.profile {
   text-align: center;
   bottom: 10px;
   color: var(--color-primary);
+}
+
+/* グリッドレイアウトのマージン調整 */
+.grid {
+  margin-top: 80px;
+}
+
+/* Ayu Mirage */
+/* @import does not work in Marp @see https://github.com/orgs/marp-team/discussions/103 */
+
+/* ayu mirage highlight.js theme
+ * Based on ayu mirage by dempfi
+ * Modified for Marp compatibility
+ */
+
+:root {
+  --ayu-bg: #262d35;
+  --ayu-fg: #cbccc6;
+  --ayu-comment: #5c6773;
+  --ayu-keyword: #ffa759;
+  --ayu-markup: #f28779;
+  --ayu-constant: #d4bfff;
+  --ayu-string: #bae67e;
+  --ayu-entity: #73d0ff;
+  --ayu-tag: #5ccfe6;
+  --ayu-func: #ffd580;
+  --ayu-error: #ff3333;
+}
+
+pre {
+  color: var(--ayu-fg) !important;
+  background: rgba(38, 45, 53, 0.4) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* コメント系 */
+pre .hljs-comment,
+pre .hljs-quote {
+  color: var(--ayu-comment) !important;
+  font-style: italic;
+}
+
+/* キーワード、ドクタグ、数式など */
+pre .hljs-doctag,
+pre .hljs-keyword,
+pre .hljs-formula {
+  color: var(--ayu-keyword) !important;
+}
+
+/* セクション、名前、タグ、削除行、substなど */
+pre .hljs-section,
+pre .hljs-name,
+pre .hljs-selector-tag,
+pre .hljs-deletion,
+pre .hljs-subst {
+  color: var(--ayu-markup) !important;
+}
+
+/* リテラル */
+pre .hljs-literal {
+  color: var(--ayu-constant) !important;
+}
+
+/* 文字列、正規表現、追加、属性など */
+pre .hljs-string,
+pre .hljs-regexp,
+pre .hljs-addition,
+pre .hljs-attribute,
+pre .hljs-meta .hljs-string {
+  color: var(--ayu-string) !important;
+}
+
+/* 型、変数、クラス選択子、疑似クラス、番号など */
+pre .hljs-attr,
+pre .hljs-variable,
+pre .hljs-template-variable,
+pre .hljs-type,
+pre .hljs-selector-class,
+pre .hljs-selector-attr,
+pre .hljs-selector-pseudo,
+pre .hljs-number {
+  color: var(--ayu-entity) !important;
+}
+
+/* シンボル、箇条書き、リンク、メタ、ID選択子、タイトルなど */
+pre .hljs-symbol,
+pre .hljs-bullet,
+pre .hljs-link,
+pre .hljs-meta,
+pre .hljs-selector-id,
+pre .hljs-title {
+  color: var(--ayu-tag) !important;
+}
+
+/* 組み込み、クラス、関数名など */
+pre .hljs-built_in,
+pre .hljs-title.class_,
+pre .hljs-class .hljs-title,
+pre .hljs-function {
+  color: var(--ayu-func) !important;
+}
+
+/* 強調・強調表示 */
+pre .hljs-emphasis {
+  font-style: italic;
+}
+
+pre .hljs-strong {
+  font-weight: bold;
+}
+
+/* エラー */
+pre .hljs-error {
+  color: var(--ayu-bg) !important;
+  background: var(--ayu-error) !important;
 }
