@@ -3,7 +3,7 @@
   "scripts": {
     "preview": "marp --engine ./src/lib/highlight-sol.js -s ./src",
     "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files --browser chrome",
-    "build:pdf": "marp --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines --browser chrome"
+    "build:pdf": "marp --verbose --pdf --allow-local-files --theme-set ./src/themes/*.css"
   },
   "dependencies": {
     "@marp-team/marp-cli": "^4.0.0",
