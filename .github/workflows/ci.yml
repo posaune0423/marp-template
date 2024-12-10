@@ -37,7 +37,7 @@ jobs:
       - name: Marp Build
         uses: docker://marpteam/marp-cli:v3.0.2
         with:
-          args: ./src --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines
+          args: --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines
         env:
           MARP_USER: root:root
 
