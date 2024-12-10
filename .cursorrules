@@ -9,13 +9,19 @@ Please follow the conventions below when creating presentations!!!
 - If using HTML tags like `<div>` in Markdown, ensure to add a blank line before the next Markdown text.
 - Effectively use Tailwind utility classes to create commonly used layouts for slide creation.
 - When changing parent categories, insert a dedicated slide displaying only the category title to clearly indicate the change.
+
   - e.g. ```
+
     ## <!-- header: '' -->
+
     # Parent Category Title
+
     ***
+
     ```
 
     ```
+
 - Add `<!-- header: HeaderTitle -->` before the slide title to label the parent category.
 - Display child category titles as H2 headings.
 - Use `---` to separate slides in Marp.
@@ -90,4 +96,20 @@ section {
 # Slide Title
 
 Content with special formatting
+```
+
+## Commit Message
+
+- Commit message should be concise and descriptive but not too long.
+- Commit message MUST have a prefix like below according to the type of change.
+
+```
+feat: A new feature
+fix: A bug fix
+docs: Documentation only changes
+style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+refactor: A code change that neither fixes a bug nor adds a feature
+perf: A code change that improves performance
+test: Adding missing or correcting existing tests
+chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
 ```
