@@ -3,14 +3,13 @@ marp: true
 theme: eth
 paginate: true
 style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
+  
 footer: '@Sample Inc.'
 ---
 
-# Web3 Development with Solidity
+# Marp Presentation Guide
 
-## Best Practices & Examples
-
-Asuma Yamada
+A comprehensive template for creating beautiful slides
 
 ---
 
@@ -51,59 +50,106 @@ GitHub: [@posaune0423](https://github.com/posaune0423)
 
 ## Table of Contents
 
-1. Smart Contract Development
-2. Security Best Practices
-3. Testing & Deployment
-4. Real-world Examples
+1. Overview
+2. Layout Examples
+3. Code Examples
 
 ---
 
-<!-- header: Smart Contract Development -->
+<!-- _class: title -->
 
-## Basic Smart Contract Structure
-
-<div class="code-block">
-
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.19;
-
-contract SimpleStorage {
-    uint256 private value;
-
-    event ValueChanged(uint256 newValue);
-
-    function setValue(uint256 _value) public {
-        value = _value;
-        emit ValueChanged(_value);
-    }
-
-    function getValue() public view returns (uint256) {
-        return value;
-    }
-}
-```
-
-</div>
-
----
-
-## Advanced Pattern: Diamond Pattern
+## Overview
 
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-### Key Points
+### What is Marp?
 
-- Modular contract design
-- Upgradeable components
-- Gas efficient
-- EIP-2535 standard
+Markdown Presentation Ecosystem that allows you to create beautiful slides using:
+
+- Simple Markdown syntax
+- Custom CSS themes
+- HTML and CSS integration
+- Various layout options
+
+</div>
+
+<div class="flex justify-center items-center">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKokeVcAuyCSayNArOvGODdH38xlLWkDGBMg&s"  class="rounded-lg shadow-lg" />
+</div>
+</div>
+
+---
+
+<!-- header: '' -->
+
+# Layout Examples
+
+---
+
+<!-- header: Layout Examples -->
+
+## Multi-column Layout
+
+<div class="grid grid-cols-3 gap-4">
+<div class="bg-blue-400 p-4 rounded-lg">
+
+### Column 1
+
+- Basic Markdown
+- Simple lists
+- Code blocks
+
+</div>
+<div class="bg-green-400 p-4 rounded-lg">
+
+### Column 2
+
+- Images
+- Tables
+- Quotes
+
+</div>
+<div class="bg-yellow-400 p-4 rounded-lg">
+
+### Column 3
+
+- Custom CSS
+- Themes
+- Directives
+
+</div>
+</div>
+
+---
+
+<!-- header: '' -->
+
+# Code Examples
+
+---
+
+<!-- header: Code Examples -->
+
+## Syntax Highlighting
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+
+### Multiple Languages
+
+Marp supports various programming languages:
+
+- JavaScript/TypeScript
+- Python
+- CSS
+- You can add more languages by customizing the engine
 
 </div>
 <div class="code-block">
 
 ```solidity
+// Solidity
 contract Diamond {
     bytes32 constant DIAMOND_STORAGE_POSITION =
         keccak256("diamond.storage");
@@ -121,110 +167,6 @@ contract Diamond {
     }
 }
 ```
-
-</div>
-</div>
-
----
-
-<!-- header: Security Best Practices -->
-
-## Common Security Patterns
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-### Checks-Effects-Interactions
-
-1. Check preconditions
-2. Update state
-3. Interact with other contracts
-
-### Re-entrancy Guard
-
-```solidity
-modifier nonReentrant() {
-    require(!locked, "Reentrant call");
-    locked = true;
-    _;
-    locked = false;
-}
-```
-
-</div>
-<div>
-
-### Access Control
-
-```solidity
-contract Ownable {
-    address private _owner;
-
-    modifier onlyOwner() {
-        require(msg.sender == _owner,
-            "Caller is not owner");
-        _;
-    }
-
-    function transferOwnership(
-        address newOwner
-    ) public onlyOwner {
-        require(newOwner != address(0));
-        _owner = newOwner;
-    }
-}
-```
-
-</div>
-</div>
-
----
-
-<!-- header: Testing & Deployment -->
-
-## Testing with Hardhat
-
-<div class="code-block">
-
-```typescript
-import { expect } from 'chai'
-import { ethers } from 'hardhat'
-
-describe('SimpleStorage', function () {
-  it('Should store and retrieve value', async function () {
-    const SimpleStorage = await ethers.getContractFactory('SimpleStorage')
-    const storage = await SimpleStorage.deploy()
-    await storage.deployed()
-
-    await storage.setValue(42)
-    expect(await storage.getValue()).to.equal(42)
-  })
-})
-```
-
-</div>
-
----
-
-## Real-world Examples
-
-<div class="grid grid-cols-2 gap-4">
-<div>
-
-### VWBL Protocol
-
-- NFT Access Control
-- Encryption/Decryption
-- On-chain Verification
-
-</div>
-<div>
-
-### PixeLAW
-
-- Autonomous World
-- Game Logic
-- State Management
 
 </div>
 </div>
