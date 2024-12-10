@@ -21,24 +21,10 @@ jobs:
     runs-on: macos-14
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
+      - uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '23'
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build PDF
-        run: npm run build:pdf
-
-      - name: Build PPTX
-        run: npm run build:pptx
+      - name: Convert Markdown into HTML and PDF
+        uses: KoharaKazuya/marp-cli-action@v2
 
       - name: Commit and push changes
         run: |
