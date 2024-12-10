@@ -91,3 +91,9 @@ section {
 
 Content with special formatting
 ```
+
+## Commit Message
+
+- Commit message should be in English.
+- Commit message should be concise and descriptive.
+- Commit message should be in the format of "feat: add new feature" or "fix: fix bug".
