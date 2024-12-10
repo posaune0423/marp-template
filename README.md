@@ -37,7 +37,7 @@ see [src/lib/highlight-sol.js](./src/lib/highlight-sol.js)
 
 ### How to add custom theme
 
-see [src/themes/eth.css](./src/themes/eth.css) Line: 111
+see [src/themes/eth.css#L111](./src/themes/eth.css#L111)
 
 ## References
 
