@@ -2,8 +2,8 @@
   "name": "marp-template",
   "scripts": {
     "preview": "marp --engine ./src/lib/highlight-sol.js -s ./src",
-    "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files",
-    "build:pdf": "marp --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines"
+    "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files --browser chrome",
+    "build:pdf": "marp --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines --browser chrome"
   },
   "dependencies": {
     "@marp-team/marp-cli": "^4.0.0",
