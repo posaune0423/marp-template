@@ -2,7 +2,7 @@
   "name": "marp-template",
   "scripts": {
     "preview": "marp --engine ./src/lib/highlight-sol.js -s ./src",
-    "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files --browser chrome",
+    "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files",
     "build:pdf": "marp --engine ./src/lib/highlight-sol.js --pdf --allow-local-files --theme-set ./src/themes/*.css"
   },
   "dependencies": {

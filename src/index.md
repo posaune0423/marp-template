@@ -13,7 +13,7 @@ A comprehensive template for creating beautiful slides
 
 ---
 
-## Profile
+## PROFILE
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -48,7 +48,7 @@ GitHub: [@posaune0423](https://github.com/posaune0423)
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 1. Overview
 2. Layout Examples
@@ -58,7 +58,7 @@ GitHub: [@posaune0423](https://github.com/posaune0423)
 
 <!-- _class: title -->
 
-## Overview
+## OVERVIEW
 
 <div class="grid grid-cols-2 gap-4">
 <div>
@@ -131,7 +131,7 @@ Markdown Presentation Ecosystem that allows you to create beautiful slides using
 
 <!-- header: Code Examples -->
 
-## Syntax Highlighting
+## SYNTAX HIGHLIGHTING
 
 <div class="grid grid-cols-2 gap-4">
 <div>
