@@ -16,9 +16,6 @@
   --color-primary: #9357f4;
   --color-link: #cdb0fd;
   --color-text-title: #fff;
-  background: url('./themes/assets/eth/bg.webp') no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
 }
 
 header {

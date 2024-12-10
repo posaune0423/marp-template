@@ -3,7 +3,7 @@ marp: true
 theme: eth
 paginate: true
 style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
-  
+backgroundImage: url(./themes/assets/eth/bg.webp)
 footer: '@Sample Inc.'
 ---
 
