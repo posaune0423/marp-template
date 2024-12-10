@@ -39,6 +39,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 'latest'
+
       - name: Build PDF
         run: npm run build:pdf
 
