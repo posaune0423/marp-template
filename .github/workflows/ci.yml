@@ -50,6 +50,11 @@ jobs:
       - name: Build PPTX
         run: npm run build:pptx
 
+      - name: Configure Git to handle binary files correctly
+        run: |
+          git config --global core.autocrlf false
+          git config --global core.eol lf
+
       - name: Commit and push changes
         run: |
           git config user.name github-actions

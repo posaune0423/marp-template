@@ -101,7 +101,7 @@ Content with special formatting
 ## Commit Message
 
 - Commit message should be concise and descriptive.
-- should have a prefix like below
+- Commit message MUST have a prefix like below according to the type of change.
 
 ```
 feat: A new feature
