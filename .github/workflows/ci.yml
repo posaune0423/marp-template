@@ -16,7 +16,6 @@ permissions:
   contents: write
   pull-requests: write
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,11 +34,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build PDF
-        run: npm run build:pdf
-
-      - name: Build PPTX
-        run: npm run build:pptx
+      - name: Marp Build
+        uses: docker://marpteam/marp-cli:v3.0.2
+        with:
+          args: ./src --engine ./src/lib/highlight-sol.js --pdf --theme-set ./src/themes/*.css --allow-local-files --pdf-outlines
+        env:
+          MARP_USER: root:root
 
       - name: Commit and push changes
         run: |
