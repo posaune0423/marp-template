@@ -24,10 +24,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
-          lfs: true
+          # lfs: true
 
-      - name: Set up Git LFS
-        run: git lfs install --local
+      # - name: Set up Git LFS
+      #   run: git lfs install --local
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -50,24 +50,24 @@ jobs:
       - name: Build PPTX
         run: npm run build:pptx
 
-      - name: Ensure .gitattributes is present
-        run: |
-          if [ ! -f .gitattributes ]; then
-            echo "*.pdf filter=lfs diff=lfs merge=lfs -text" >> .gitattributes
-            echo "*.pptx filter=lfs diff=lfs merge=lfs -text" >> .gitattributes
-            git add .gitattributes
-          fi
+      # - name: Ensure .gitattributes is present
+      #   run: |
+      #     if [ ! -f .gitattributes ]; then
+      #       echo "*.pdf filter=lfs diff=lfs merge=lfs -text" >> .gitattributes
+      #       echo "*.pptx filter=lfs diff=lfs merge=lfs -text" >> .gitattributes
+      #       git add .gitattributes
+      #     fi
 
-      - name: Ensure Git LFS is tracking files
-        run: |
-          git lfs track "*.pdf" "*.pptx"
-          git add .gitattributes
+      # - name: Ensure Git LFS is tracking files
+      #   run: |
+      #     git lfs track "*.pdf" "*.pptx"
+      #     git add .gitattributes
 
-      - name: Add generated files to Git
-        run: git add sample/index.pdf sample/index.pptx
+      # - name: Add generated files to Git
+      #   run: git add sample/index.pdf sample/index.pptx
 
-      - name: Verify Git LFS files
-        run: git lfs ls-files
+      # - name: Verify Git LFS files
+      #   run: git lfs ls-files
 
       - name: Commit and push changes
         env:
