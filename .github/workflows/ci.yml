@@ -11,6 +11,7 @@ on:
       - main
     paths:
       - 'src/**'
+
 permissions:
   contents: write
   pull-requests: write
@@ -18,12 +19,25 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
+        with:
+          lfs: true
+
+      - name: Setup Git LFS
+        run: |
+          git lfs install
+          git lfs pull
 
       - name: Convert Markdown into HTML and PDF
         uses: KoharaKazuya/marp-cli-action@v3
+
+      - name: Configure Git LFS
+        run: |
+          git config --global filter.lfs.required true
+          git config --global filter.lfs.clean "git-lfs clean -- %f"
+          git config --global filter.lfs.smudge "git-lfs smudge -- %f"
+          git config --global filter.lfs.process "git-lfs filter-process"
 
       - name: Commit and push changes
         run: |
