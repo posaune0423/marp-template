@@ -31,6 +31,16 @@ npm run build:pdf
 
 ## Customize
 
+## Support drawio AWS diagrams
+
+Install AWS icons from [here](https://github.com/m-radzikowski/diagrams-aws-icons) 
+and add to `~/.vscode-drawio/AWS Architecture Icons 20240206.xml`
+
+and then you will see the AWS icons in the drawio palette.
+
+![AWS Icons](https://github.com/m-radzikowski/diagrams-aws-icons/blob/master/diagrams.net-screenshot.png?raw=true)
+
+
 ### How to add custom syntax highligt for the specific language
 
 see [src/lib/highlight-sol.js](./src/lib/highlight-sol.js)

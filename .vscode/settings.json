@@ -1,3 +1,12 @@
 {
-  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false
+  "markdown-preview-enhanced.hideDefaultVSCodeMarkdownPreviewButtons": false,
+  "hediet.vscode-drawio.customLibraries": [
+    {
+      "entryId": "AWS-20230428", //https://github.com/m-radzikowski/diagrams-aws-icons
+      "libName": "AWS-20230428",
+      "file": "${userHome}/.vscode-drawio/AWS Architecture Icons 20240206.xml"
+    }
+  ],
+  "hediet.vscode-drawio.resizeImages": null,
+  "hediet.vscode-drawio.appearance": "dark"
 }
