@@ -17,6 +17,7 @@
 }
 
 section {
+  --h1-color: var(--solana-text);
   color: var(--solana-text);
   background:
     radial-gradient(circle at 12% 18%, rgba(153, 69, 255, 0.26) 0, transparent 30%),
