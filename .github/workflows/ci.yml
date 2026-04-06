@@ -29,15 +29,13 @@ jobs:
       # - name: Set up Git LFS
       #   run: git lfs install --local
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: 'package-lock.json'
+          bun-version: latest
 
       - name: Install dependencies
-        run: npm install
+        run: bun install --frozen-lockfile
 
       # - name: Install Chrome
       #   uses: browser-actions/setup-chrome@v1
@@ -45,10 +43,10 @@ jobs:
       #     chrome-version: 'latest'
 
       - name: Build PDF
-        run: npm run build:pdf
+        run: bun run build:pdf
 
       - name: Build PPTX
-        run: npm run build:pptx
+        run: bun run build:pptx
 
       # - name: Ensure .gitattributes is present
       #   run: |

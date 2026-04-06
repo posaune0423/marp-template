@@ -1,5 +1,6 @@
 {
   "name": "marp-template",
+  "packageManager": "bun@1.3.10",
   "scripts": {
     "preview": "marp --engine ./src/lib/highlight-sol.js -s ./src",
     "build:pptx": "marp --engine ./src/lib/highlight-sol.js --pptx --theme-set ./src/themes/*.css --allow-local-files",
