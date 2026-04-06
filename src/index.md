@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: eth
+theme: solana
 paginate: true
 style: @import url('https://unpkg.com/tailwindcss@^2/dist/utilities.min.css');
 backgroundImage: url(./themes/assets/eth/bg.webp)
@@ -120,6 +120,16 @@ Markdown Presentation Ecosystem that allows you to create beautiful slides using
 
 </div>
 </div>
+
+---
+
+### Table
+
+| Name    | Age | Country |
+| ------- | --- | ------- |
+| Alice   | 24  | USA     |
+| Bob     | 30  | Canada  |
+| Charlie | 28  | UK      |
 
 ---
 
