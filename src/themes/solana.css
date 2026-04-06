@@ -53,6 +53,16 @@ mark {
   color: var(--solana-link);
 }
 
+table th,
+table td {
+  background: rgba(11, 16, 32, 0.92);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+table th {
+  background: rgba(153, 69, 255, 0.2);
+}
+
 code {
   font-family: 'ABC Diatype Mono', 'JetBrains Mono', 'IBM Plex Mono', monospace;
   color: #dffef1;
