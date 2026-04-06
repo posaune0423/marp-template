@@ -1,10 +1,10 @@
 /* @theme solana */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 @import 'default';
 
 :root {
-  font-family: 'ABC Diatype', 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'ABC Diatype', 'Plus Jakarta Sans', 'Manrope', 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
 
   --solana-purple: #9945ff;
   --solana-green: #14f195;
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'ABC Diatype', 'Plus Jakarta Sans', 'Manrope', sans-serif;
+  font-family: 'ABC Diatype', 'Plus Jakarta Sans', 'Manrope', 'Zen Kaku Gothic New', 'Noto Sans JP', sans-serif;
   color: var(--solana-text);
 }
 
